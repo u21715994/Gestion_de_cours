@@ -31,7 +31,7 @@ class FormationController extends Controller
      */
     public function store(Request $request){
         $request->validate([
-            'intitule' =>'required|string|max:50',
+            'intitule' =>'required|alpha|max:50',
         ]);
         $formation = new Formation();
         $formation->intitule = $request->input('intitule');
