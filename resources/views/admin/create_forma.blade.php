@@ -4,7 +4,7 @@
 
 @section('contents')
     <form method="post">
-        Intitule de la formation : <input type="text" name="intitule">
+        Intitule de la formation : <input type="text" name="intitule" value="{{old('intitule')}}">
         <input type="submit" value="Envoyer">
         @csrf
     </form>
