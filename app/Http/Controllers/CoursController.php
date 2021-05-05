@@ -38,7 +38,7 @@ class CoursController extends Controller
     public function store(Request $request){
         $request->validate([
             'intitule_f' =>'required|string|max:50',
-            'intitule' =>'required|alpha|max:50',
+            'intitule' =>'required|string|max:50',
         ]);
         $formation = Formation::where('intitule',$request->input('intitule_f'))->first();
         if(!($formation))
