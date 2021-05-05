@@ -9,7 +9,7 @@
                 <option value="{{$f->intitule}}">{{$f->intitule}}</option>
             @endforeach
         </select>
-        Intitule du cours : <input type="text" name="intitule">
+        Intitule du cours : <input type="text" name="intitule" value="{{old('intitule')}}">
         <input type="submit" value="Envoyer">
         @csrf
     </form>
